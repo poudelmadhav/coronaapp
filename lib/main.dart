@@ -71,7 +71,15 @@ class _MadhavCovidState extends State<MadhavCovid> {
     return Column(
       children: <Widget>[
         Center(
-          child: Text(lstCountry[0]['countries_stat'][i]['country_name']),
+          child: Container(
+            padding: EdgeInsets.all(5),
+            child: Text(
+              lstCountry[0]['countries_stat'][i]['country_name'],
+              style: TextStyle(
+                fontSize: 24
+              ),
+            ),
+          ),
         ),
         Row(
           children: <Widget>[
@@ -163,7 +171,8 @@ class _MadhavCovidState extends State<MadhavCovid> {
               ),
             )
           ],
-        )
+        ),
+        Padding(padding: EdgeInsets.all(10),)
       ]
     );
   }
